@@ -13,6 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/* LINE 64 MODIFIED FROM ORIGINAL by Alden Erazo to include value & keyName */
+
 package com.github.sbaudoin.sonar.plugins.yaml.checks;
 
 import com.github.sbaudoin.yamllint.LintScanner;
