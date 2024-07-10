@@ -58,7 +58,7 @@ public class ForbiddenValueCheck extends ForbiddenCheck {
                 Matcher m = forbiddenValuePattern.matcher(((ScalarToken)t3).getValue());
                 if (m.find()) {
                     // Report new error
-                    addViolation("Forbidden value found", t);
+                    addViolation("Forbidden value " + key + " found in " + keyName, t);
                 }
             }
         }
