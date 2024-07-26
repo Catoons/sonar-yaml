@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/* LINE 64 MODIFIED FROM ORIGINAL by Alden Erazo to include value & keyName */
+/* LINES 64 & 65 MODIFIED FROM ORIGINAL by Alden Erazo to include value & keyName */
 
 package com.github.sbaudoin.sonar.plugins.yaml.checks;
 
@@ -61,7 +61,8 @@ public class ForbiddenValueCheck extends ForbiddenCheck {
                 Matcher m = forbiddenValuePattern.matcher(((ScalarToken)t3).getValue());
                 if (m.find()) {
                     // Report new error
-                    addViolation("Forbidden value " + value + " found in " + keyName, t);
+                    String FoundValue = m.group(); // Get the matched text
+                    addViolation("Forbidden value " + FoundValue + " found in " + keyName, t);
                 }
             }
         }
